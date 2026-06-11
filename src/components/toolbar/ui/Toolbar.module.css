@@ -1,0 +1,26 @@
+.toolbarSlot {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.toolbarSlot > * {
+  pointer-events: auto;
+}
+
+.toolbar {
+  border: 1px solid var(--gray);
+  box-shadow: none;
+}
+
+.toolbar .divider {
+  align-self: center;
+  height: 24px;
+  border: none;
+  border-right: 1px solid var(--gray);
+}

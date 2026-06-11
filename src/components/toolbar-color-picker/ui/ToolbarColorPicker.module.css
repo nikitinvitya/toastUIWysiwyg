@@ -1,0 +1,29 @@
+.colorMenuList {
+  display: flex;
+  flex-direction: row;
+}
+
+.colorMenuList :global(.MuiMenuItem-root) {
+  padding: 10px;
+}
+
+.colorPaletteItem {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--gray);
+}
+
+.red { background-color: #e03131; }
+.green { background-color: #2f9e44; }
+.blue { background-color: #1971c2; }
+.orange { background-color: #f08c00; }
+.violet { background-color: #8049ff; }
+
+.default { background-color: #000000; }
+
+[data-theme='dark'] .default {
+  background-color: var(--editor-text);
+  border: 1px solid var(--column-resize);
+}

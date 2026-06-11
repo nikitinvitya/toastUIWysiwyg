@@ -1,0 +1,16 @@
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+  gap: 10px;
+}
+
+.actions:global(.MuiDialogActions-root) {
+  justify-content: center;
+}

@@ -1,0 +1,165 @@
+.fieldRoot {
+  margin-top: 10px;
+  position: relative;
+  padding: 40px 12px 12px;
+  width: 100%;
+}
+
+.fieldRoot.focused:not(.error) :global(.ProseMirror.toastui-editor-contents) {
+  border-bottom-color: #1976d2;
+}
+
+.fieldRoot.error :global(.ProseMirror.toastui-editor-contents) {
+  border-bottom-color: #d32f2f;
+}
+
+.fieldRoot.disabled :global(.ProseMirror.toastui-editor-contents) {
+  opacity: 0.5;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.fieldRoot.disabledEmpty :global(.ProseMirror.toastui-editor-contents p:first-child:only-child::before) {
+  content: 'Placeholder';
+  color: var(--editor-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.fieldRoot.disabledEmpty :global(.placeholder.ProseMirror-widget) {
+  display: none;
+}
+
+.editorWrapper :global(.toastui-editor-toolbar) {
+  display: none;
+}
+
+.editorWrapper :global(.toastui-editor-defaultUI) {
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.editorWrapper :global(.toastui-editor-ww-container) {
+  background-color: transparent;
+}
+
+.editorWrapper :global(.toastui-editor-main-container) {
+  color: var(--editor-text);
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) {
+  background: var(--editor-bg);
+  color: var(--editor-text);
+  caret-color: var(--editor-text);
+  width: 100%;
+  margin: 0;
+  padding: 16px 8px 8px;
+  border-radius: 8px;
+  outline: none;
+  min-height: 50px;
+  max-height: 500px;
+  overflow-y: auto;
+  transition: background-color 0.2s, border-color 0.2s;
+  border-bottom: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents p),
+.fieldRoot :global(.ProseMirror.toastui-editor-contents h1),
+.fieldRoot :global(.ProseMirror.toastui-editor-contents h2),
+.fieldRoot :global(.ProseMirror.toastui-editor-contents h3),
+.fieldRoot :global(.ProseMirror.toastui-editor-contents h4),
+.fieldRoot :global(.ProseMirror.toastui-editor-contents h5),
+.fieldRoot :global(.ProseMirror.toastui-editor-contents h6),
+.fieldRoot :global(.ProseMirror.toastui-editor-contents li),
+.fieldRoot :global(.ProseMirror.toastui-editor-contents td),
+.fieldRoot :global(.ProseMirror.toastui-editor-contents th) {
+  color: inherit;
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents p) {
+  margin: 0;
+}
+
+.fieldRoot :global(.ProseMirror .placeholder),
+.fieldRoot :global(.placeholder.ProseMirror-widget) {
+  color: var(--editor-placeholder);
+  line-height: 1.6;
+  user-select: none;
+  pointer-events: none;
+}
+
+.fieldRoot:not(.disabled) :global(.ProseMirror.toastui-editor-contents:hover:not(:focus)) {
+  background: var(--editor-bg-hover);
+}
+
+.fieldRoot:not(.disabled) :global(.ProseMirror.toastui-editor-contents:focus),
+.fieldRoot:not(.disabled) :global(.ProseMirror-focused.toastui-editor-contents) {
+  background: var(--editor-bg-focus);
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) ul,
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) ol {
+  padding: 0 1rem;
+  margin: 1.25rem 1rem 1.25rem 0.4rem;
+  list-style-position: outside;
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) ul {
+  list-style-type: disc;
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) ol {
+  list-style-type: decimal;
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) li p {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  color: inherit;
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) :not(pre) > code {
+  background-color: var(--editor-code-bg);
+  color: var(--editor-code-text);
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) pre {
+  background: var(--editor-pre-bg);
+  color: var(--editor-pre-text);
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) blockquote {
+  border-left: 3px solid var(--editor-blockquote-border);
+  padding-left: 8px;
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) hr {
+  border-top-color: var(--editor-hr);
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) table {
+  border-collapse: collapse;
+  margin: 0;
+  overflow: hidden;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) td,
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) th {
+  border: 1px solid var(--table-head);
+  box-sizing: border-box;
+  min-width: 1em;
+  padding: 6px 8px;
+  position: relative;
+  vertical-align: top;
+}
+
+.fieldRoot :global(.ProseMirror.toastui-editor-contents) th {
+  background-color: var(--gray);
+  font-weight: bold;
+  text-align: left;
+}

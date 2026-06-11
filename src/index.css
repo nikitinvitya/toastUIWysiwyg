@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+:root, [data-theme='light'] {
+  --table-head: #c1c1c1;
+  --gray: #b1b1b1;
+  --selected-cell: #a1a1a1;
+  --column-resize: #808080;
+  --editor-text: #1a1a1a;
+  --editor-bg: transparent;
+  --editor-bg-hover: #dfdfdf;
+  --editor-bg-focus: #ececec;
+  --editor-placeholder: var(--gray);
+  --editor-code-bg: #f3f0ff;
+  --editor-code-text: #1a1a1a;
+  --editor-pre-bg: #1a1a1a;
+  --editor-pre-text: #f5f5f5;
+  --editor-blockquote-border: #b1b1b1;
+  --editor-hr: #c1c1c1;
+}
+
+[data-theme='dark'] {
+  --table-head: #4c4c4c;
+  --gray: #5e5e5e;
+  --selected-cell: #6e6e6e;
+  --column-resize: #bababa;
+  --editor-text: #fff;
+  --editor-bg: transparent;
+  --editor-bg-hover: #222222;
+  --editor-bg-focus: #1b1b1b;
+  --editor-placeholder:var(--gray);
+  --editor-code-bg: #b2b2f1;
+  --editor-code-text: #e8e8e8;
+  --editor-pre-bg: #cccccc;
+  --editor-pre-text: #505050;
+  --editor-blockquote-border: #5e5e5e;
+  --editor-hr: #4c4c4c;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
